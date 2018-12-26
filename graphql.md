@@ -40,3 +40,31 @@ type Query {
     animals(limit: Int): [Animals]
 }
 ```
+
+### Input with default value
+
+```graphql
+type Query {
+    animals(limit: Int = 10): [Animals]
+}
+```
+
+### Input with multiple arguments (and default values)
+
+```graphql
+type Query {
+    animals(limit: Int, sort: String = "asc"): [Animals]
+}
+```
+
+```graphql
+type Query {
+    animals(limit: Int = 10, sort: String): [Animals]
+}
+```
+
+```graphql
+type Query {
+    animals(limit: Int = 20, sort: String = "desc"): [Animals]
+}
+```

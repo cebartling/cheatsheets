@@ -29,3 +29,14 @@
 - `[String]`: List of nullable strings
 - `[String]!`: Non-null list of nullable strings
 - `[String!]!`: Non-null list of non-null strings
+
+
+## Input arguments
+
+### Basic input
+
+```graphql
+type Query {
+    animals(limit: Int): [Animals]
+}
+```

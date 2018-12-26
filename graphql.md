@@ -120,3 +120,40 @@ type Baz implements Moo, Goo {
     //...
 }
 ```
+
+## Unions
+
+```graphql
+type Foo {
+    name: String    
+}
+
+type Bar {
+    is_bar: Boolean!
+}
+
+union SingleUnion = Foo
+union MultipleUnion = Foo | Bar
+
+type Root {
+    single: SingleUnion
+    multiple: MultipleUnion
+}
+```
+
+## Enumerations
+
+```graphql
+enum USER_STATE {
+    NOT_FOUND
+    ACTIVE
+    INACTIVE
+    SUSPENDED
+}
+
+type Root {
+    stateForUser(userID: ID!): USER_STATE!
+    users(state: USER_STATE, limit: Int = 10): [User]
+}
+```
+

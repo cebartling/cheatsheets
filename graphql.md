@@ -37,7 +37,7 @@
 
 ```graphql
 type Query {
-    animals(limit: Int): [Animals]
+    animals(limit: Int): [Animal]
 }
 ```
 
@@ -45,7 +45,7 @@ type Query {
 
 ```graphql
 type Query {
-    animals(limit: Int = 10): [Animals]
+    animals(limit: Int = 10): [Animal]
 }
 ```
 
@@ -53,18 +53,33 @@ type Query {
 
 ```graphql
 type Query {
-    animals(limit: Int, sort: String = "asc"): [Animals]
+    animals(limit: Int, sort: String = "asc"): [Animal]
 }
 ```
 
 ```graphql
 type Query {
-    animals(limit: Int = 10, sort: String): [Animals]
+    animals(limit: Int = 10, sort: String): [Animal]
 }
 ```
 
 ```graphql
 type Query {
-    animals(limit: Int = 20, sort: String = "desc"): [Animals]
+    animals(limit: Int = 20, sort: String = "desc"): [Animal]
 }
 ```
+
+## Input types
+
+```graphql
+input ListAnimalsInput {
+    limit: Int
+    sort: String
+    since_id: ID
+}
+
+type Query {
+    animals(input: ListAnimalsInput): [Animal]!
+}
+```
+

@@ -45,7 +45,7 @@ type Query {
 
 ```graphql
 type Query {
-    animals(limit: Int = 10): [Animal]
+    animals(limit: Int = 10): [Animal]!
 }
 ```
 
@@ -53,19 +53,19 @@ type Query {
 
 ```graphql
 type Query {
-    animals(limit: Int, sort: String = "asc"): [Animal]
+    animals(limit: Int, sort: String = "asc"): [Animal]!
 }
 ```
 
 ```graphql
 type Query {
-    animals(limit: Int = 10, sort: String): [Animal]
+    animals(limit: Int = 10, sort: String): [Animal]!
 }
 ```
 
 ```graphql
 type Query {
-    animals(limit: Int = 20, sort: String = "desc"): [Animal]
+    animals(limit: Int = 20, sort: String = "desc"): [Animal]!
 }
 ```
 
@@ -83,3 +83,40 @@ type Query {
 }
 ```
 
+## Custom scalars
+
+```graphql
+scalar Url
+
+type User {
+    name: String!
+    homepage: Url    
+}
+```
+
+## Interfaces
+
+```graphql
+interface Foo {
+    is_foo: Boolean!
+}
+
+interface Moo {
+    is_moo: Boolean!
+}
+
+interface Goo {
+    is_goo: Boolean!
+}
+
+type Bar implements Foo {
+    is_foo: Boolean!
+    //...
+}
+
+type Baz implements Moo, Goo {
+    is_moo: Boolean!
+    is_goo: Boolean!
+    //...
+}
+```

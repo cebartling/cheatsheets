@@ -1,9 +1,4 @@
-# GraphQL Cheatsheet
-
-##
-
-
-## Schema
+# GraphQL Schema Cheatsheet
 
 ## Built-in scalar types
 

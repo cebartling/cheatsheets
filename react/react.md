@@ -6,7 +6,7 @@
 
 In computer science, a pure function is a function which:
 
-1. When given the same input will **ALWAYS** return the same input
+1. When given the same input, a pure function will **ALWAYS** return the same output
 2. Has no side effects (altering of external states)
 3. Does not rely on any external state
 

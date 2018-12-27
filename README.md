@@ -12,5 +12,10 @@ Various cheat sheets and miscellaneous notes for technologies that I use.
 ## Python
 - [Python](python.md) 
 
+## React
+- [React](react/react.md)
+- [Redux](react/redux.md)
+
+
 ## Vue.js
 - [Vue.js](vue.md) 

@@ -10,7 +10,8 @@ Various cheat sheets and miscellaneous notes for technologies that I use.
 - [GraphQL Schema](graphql/graphql_schema.md) 
 
 ## Python
-- [Python](python.md) 
+- [Python](python/python.md) 
+- [Pytest](python/pytest.md) 
 
 ## React
 - [React](react/react.md)

@@ -1,14 +1,16 @@
 # pytest
 
 
-## pytest-mock
+
+## Plugins
+### pytest-mock
 
 - [GitHub](https://github.com/pytest-dev/pytest-mock/)
 - This plugin installs a `mocker` fixture into your pytests. 
 - The `mocker` fixture is a thin-wrapper around the patching API provided by the [`mock` package](https://docs.python.org/dev/library/unittest.mock.html), 
 but with the benefit of not having to worry about undoing patches at the end of a test.
 
-### `assert_called_with`
+#### `assert_called_with`
 
 - [Reference](https://docs.python.org/3/library/unittest.mock.html#unittest.mock.Mock.assert_called_with)
 
@@ -17,8 +19,6 @@ method_patch = mocker.patch('collaborator.do_something')
 system_under_test('foobar', another_arg='barfoo')
 method_patch.assert_called_with('foobar')
 ```
-
-## Plugins
 
 ### `@pytest.mark.only`
 
